@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
 				{pages.map((page) => {
 					return (
 						<Link key={page.name} href={page.link}>
-							<a className="md:px-6 md:py-4 md:text-lg px-3 py-2 text-md font-semibold  hover:text-red-600 hover:underline">
+							<a className="hidden sm:inline md:text-lg px-6 py-2 md:py-4 text-md  font-semibold hover:text-red-600 hover:underline">
 								{page.name}
 							</a>
 						</Link>
