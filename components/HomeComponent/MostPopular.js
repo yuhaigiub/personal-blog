@@ -1,10 +1,10 @@
 import React from "react";
-import SmallArticle from "../SmallArticle";
+import SmallArticle from "./SmallArticle";
 
 const MostPopular = () => {
 	return (
 		<div>
-			<h2 className="text-3xl font-semibold mb-9">
+			<h2 className="text-3xl font-semibold mb-6 lg:mb-9">
 				Most Popular
 			</h2>
 			<grid className="grid grid-rows-4 gap-y-6">

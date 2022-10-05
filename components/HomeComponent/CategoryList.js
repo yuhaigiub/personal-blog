@@ -1,5 +1,5 @@
 import React from "react";
-import Category from "../Category";
+import Category from "./Category";
 
 const categories = [
 	{
@@ -43,10 +43,10 @@ const categories = [
 const CategoryList = () => {
 	return (
 		<div>
-			<h2 className="text-3xl font-semibold mb-9">
+			<h2 className="text-3xl font-semibold sm:mb-9 mb-3">
 				Category List
 			</h2>
-			<div className="flex flex-wrap gap-x-4 gap-y-4">
+			<div className="flex flex-wrap sm:gap-x-4 gap-y-2 sm:gap-y-4">
 				{categories.map((category) => {
 					return (
 						<Category key={category.name} {...category} />

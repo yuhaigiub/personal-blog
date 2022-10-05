@@ -1,5 +1,5 @@
 import React from "react";
-import Archive from "../Archive";
+import Archive from "./Archive";
 
 const archives = [
 	{ date: "July 2022", bgColor: "bg-red-500", num: 1 },

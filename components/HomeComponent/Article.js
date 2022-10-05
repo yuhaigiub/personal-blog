@@ -6,22 +6,23 @@ const Article = ({ bg }) => {
 		<div className="w-full bg-red-50 mb-5">
 			{/*image here*/}
 			<Link href="/">
-				<a className="">
-					<div className={`w-full h-64 ${bg}`} />
+				<a>
+					<div className={`w-full lg:h-64 h-44 ${bg}`} />
 				</a>
 			</Link>
-			<div className="shadow-lg w-full p-6 bg-white">
+			<div className="shadow-lg w-full lg:p-6 p-3 bg-white">
 				<Link href="/">
 					<a className="hover:cursor-pointer text-black hover:text-red-500">
-						<h3 className="text-4xl font-bold inline-block">
+						<h3 className="lg:text-4xl md:text-3xl text-xl font-bold inline-block">
 							Very Interesting and Long News heading
 						</h3>
 					</a>
 				</Link>
 				<div>
 					<div className="flex space-x-2 my-3 items-center">
-						<div className="w-8 h-8 rounded-full bg-blue-300"></div>
-						<p className="text-semibold text-xl">
+						{/*Avatar here*/}
+						<div className="w-8 h-8 rounded-full bg-blue-300" />
+						<p className="text-semibold sm:text-xl text-lg">
 							Yuhaigiub
 						</p>
 						<p className="text-slate-500">July 17,2022</p>
@@ -34,7 +35,7 @@ const Article = ({ bg }) => {
 					</content>
 					<div>
 						<Link href="/">
-							<a className="w-48 flex items-center text-slate-400 hover:text-red-500 text-xl">
+							<a className="w-48 flex items-center text-slate-400 hover:text-red-500 sm:text-xl text-lg">
 								Continue Reading{" "}
 								<span className="text-4xl">→</span>
 							</a>
