@@ -7,17 +7,17 @@ const Category = ({ name, num, color }) => {
 			<Link href="/">
 				<div
 					className={`
-                    bg-${color}-400 
+                    bg-${color}-500 
                     flex items-center 
                     text-white font-semibold 
-                    border-solid border-4 p-1 + border-${color}-400
+                    border-solid border-4 p-1 + border-${color}-500
 					hover:cursor-pointer
 					`}>
 					{name}
 				</div>
 			</Link>
 			<div
-				className={`border-solid border-4 border-${color}-400 
+				className={`border-solid border-4 border-${color}-500 
                 flex items-center justify-center w-11 h-11 text-black font-semibold`}>
 				{num}
 			</div>
