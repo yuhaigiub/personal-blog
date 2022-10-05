@@ -6,8 +6,8 @@ const SmallArticle = ({ bg }) => {
 		<div className="w-full sm:flex sm:items-center sm:gap-x-4 mb-1 sm:mb-0 shadow-lg">
 			{/*image here */}
 			<Link href="/">
-				<a className="inline-block w-full sm:w-1/3">
-					<div className={`h-32 sm:h-24 ${bg}`} />
+				<a className="inline-block w-full sm:w-1/3 h-24 sm:h-32">
+					<div className={`w-full h-full ${bg}`} />
 				</a>
 			</Link>
 			<div>
