@@ -2,12 +2,42 @@ import React from "react";
 import Category from "../Category";
 
 const categories = [
-	{ name: "Art Street", num: "1", color: "yellow" },
-	{ name: "Business", num: "2", color: "cyan" },
-	{ name: "Culture", num: "14", color: "yellow" },
-	{ name: "Design", num: "5", color: "blue" },
-	{ name: "Lifestyle", num: "3", color: "red" },
-	{ name: "World", num: "6", color: "orange" },
+	{
+		name: "Art Street",
+		num: "1",
+		bgColor: "bg-yellow-500",
+		borderColor: "border-yellow-500",
+	},
+	{
+		name: "Business",
+		num: "2",
+		bgColor: "bg-cyan-500",
+		borderColor: "border-cyan-500",
+	},
+	{
+		name: "Culture",
+		num: "14",
+		bgColor: "bg-yellow-500",
+		borderColor: "border-yellow-500",
+	},
+	{
+		name: "Design",
+		num: "5",
+		bgColor: "bg-blue-500",
+		borderColor: "border-blue-500",
+	},
+	{
+		name: "Lifestyle",
+		num: "3",
+		bgColor: "bg-red-500",
+		borderColor: "border-red-500",
+	},
+	{
+		name: "World",
+		num: "6",
+		bgColor: "bg-orange-500",
+		borderColor: "border-orange-500",
+	},
 ];
 
 const CategoryList = () => {
