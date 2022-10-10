@@ -2,13 +2,16 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/future/image";
 
-const Article = ({ img, title }) => {
+const FirstArticle = ({ img, title, id }) => {
+	const postLink = `/posts/${id}`;
+
 	return (
-		<div className="w-full bg-red-50 mb-5">
+		<div className="w-full bg-white mb-5 pb-20 relative overflow-hidden transition-all duration-1000 disabled:opacity-0">
 			{/*image here*/}
-			<Link href="/">
+			<Link href={postLink}>
 				<a>
-					<div className={`w-full lg:h-64 h-44 bg-red-500`}>
+					<div
+						className={`w-full xl:w-[70rem] h-44 xl:h-[32rem] bg-red-500 z-0 relative xl:left-64 shadow-2xl`}>
 						<Image
 							src={img}
 							alt="cannot load"
@@ -19,10 +22,10 @@ const Article = ({ img, title }) => {
 					</div>
 				</a>
 			</Link>
-			<div className="shadow-2xl w-full lg:p-6 p-3 bg-white">
-				<Link href="/">
+			<div className="shadow-xl w-full p-3 lg:p-6 bg-white xl:w-[40rem] xl:absolute xl:bottom-10 xl:left-10">
+				<Link href={postLink}>
 					<a className="hover:cursor-pointer text-black hover:text-red-500">
-						<h3 className="lg:text-3xl md:text-2xl text-xl font-bold inline-block lg:h-36 xl:h-28 overflow-hidden">
+						<h3 className="lg:text-4xl text-xl md:text-3xl xl:text-5xl font-bold inline-block">
 							{title}
 						</h3>
 					</a>
@@ -43,7 +46,7 @@ const Article = ({ img, title }) => {
 						revolutionize the end.
 					</content>
 					<div>
-						<Link href="/">
+						<Link href={postLink}>
 							<a className="w-48 flex items-center text-slate-400 hover:text-red-500 sm:text-xl text-lg">
 								Continue Reading{" "}
 								<span className="text-4xl">→</span>
@@ -56,4 +59,4 @@ const Article = ({ img, title }) => {
 	);
 };
 
-export default Article;
+export default FirstArticle;

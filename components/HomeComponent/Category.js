@@ -4,7 +4,7 @@ import Link from "next/link";
 const Category = ({ name, num, bgColor, borderColor }) => {
 	return (
 		<div
-			className={`flex w-full lg:w-auto ${bgColor} justify-between lg:justify-start lg:bg-inherit sm:gap-x-2 sm:items-center text-lg`}>
+			className={`flex w-full lg:w-auto ${bgColor} justify-between lg:justify-start lg:bg-inherit sm:gap-x-2 sm:items-center text-lg shadow-2xl`}>
 			<Link href="/">
 				<div
 					className={`

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Archive = ({ bgColor, date, num }) => {
 	return (
-		<div className="flex justify-between">
+		<div className="flex justify-between bg-white">
 			<Link href="/">
 				<p className="text-lg hover:text-red-500 hover:cursor-pointer">
 					{date}

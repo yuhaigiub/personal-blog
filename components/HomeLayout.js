@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import ArchiveList from "./HomeComponent/ArchiveList";
 
 const pages = [
 	{ name: "Home", link: "/" },
@@ -35,32 +34,7 @@ const Layout = ({ children }) => {
 					);
 				})}
 			</nav>
-			<div className="flex my-6">
-				<main className="w-4/6 bg-blue-300">
-					{children}
-				</main>
-				<div className="w-1/3 px-12 flex flex-col space-y-12">
-					<div>
-						<h2 className="text-3xl font-semibold my-9">
-							Search
-						</h2>
-						<form className="flex space-x-3">
-							<input
-								type="text"
-								id="search"
-								name="fname"
-								className="bg-white border-4 border-blue-500 h-12 w-full"
-							/>
-							<button
-								type="submit"
-								className="bg-blue-500 px-4 text-white font-semibold">
-								Search
-							</button>
-						</form>
-					</div>
-					<ArchiveList />
-				</div>
-			</div>
+			<main className="my-5">{children}</main>
 			<footer className="bg-red-300 h-24 flex items-center justify-center text-4xl font-semibold">
 				This is a footer
 			</footer>
