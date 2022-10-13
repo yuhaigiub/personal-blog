@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/future/image";
 
-const FirstArticle = ({ img, title, id }) => {
+const FirstArticle = ({ img, title, id, date }) => {
 	const postLink = `/posts/${id}`;
 
 	return (
@@ -34,22 +34,18 @@ const FirstArticle = ({ img, title, id }) => {
 					<div className="flex space-x-2 my-3 items-center">
 						{/*Avatar here*/}
 						<div className="w-8 h-8 rounded-full bg-blue-300" />
-						<p className="text-semibold sm:text-xl text-lg">
-							Yuhaigiub
-						</p>
-						<p className="text-slate-500">July 17,2022</p>
+						<p className="text-semibold sm:text-xl text-lg">Yuhaigiub</p>
+						<p className="text-slate-500">{new Date(date).toDateString()}</p>
 					</div>
 					<content className="text-slate-500">
-						In the business environment where competitive
-						pressure continues to rise, organizations are
-						looking toward IIoT as a solution to
+						In the business environment where competitive pressure continues to
+						rise, organizations are looking toward IIoT as a solution to
 						revolutionize the end.
 					</content>
 					<div>
 						<Link href={postLink}>
 							<a className="w-48 flex items-center text-slate-400 hover:text-red-500 sm:text-xl text-lg">
-								Continue Reading{" "}
-								<span className="text-4xl">→</span>
+								Continue Reading <span className="text-4xl">→</span>
 							</a>
 						</Link>
 					</div>

@@ -2,36 +2,50 @@
 	{
 		"id": "post1",
 		"title": "Stories in between layers of Paint",
-		"img": "/images/image1.jpg"
+		"img": "/images/image1.jpg",
+		"category": "Art",
+		"date": "July 11, 2022"
 	},
 	{
 		"id": "post2",
 		"title": "The suprising return of a Forgotten Nintendo Game",
-		"img": "/images/image2.jpg"
+		"img": "/images/image2.jpg",
+		"category": "Technology",
+		"date": "August 08, 2021"
 	},
 	{
 		"id": "post3",
 		"title": "Assure Polite his Really and Others Figure Though",
-		"img": "/images/image3.jpg"
+		"img": "/images/image3.jpg",
+		"category": "World",
+		"date": "August 4, 2021"
 	},
 	{
 		"id": "post4",
 		"title": "Pixar Movie Without the Existential Terror",
-		"img": "/images/image4.jpg"
+		"img": "/images/image4.jpg",
+		"category": "Art",
+		"date": "July 10, 2022"
 	},
 	{
 		"id": "post5",
 		"title": "This Life Drawing Class Uses Neon Lighting to Create Art",
-		"img": "/images/image5.jpg"
+		"img": "/images/image5.jpg",
+		"category": "Art",
+		"date": "March 8, 2021"
 	},
 	{
 		"id": "post6",
 		"title": "The Venture Studio Business Model Explained",
-		"img": "/images/image6.jpg"
+		"img": "/images/image6.jpg",
+		"category": "Business",
+		"date": "July 30, 2022"
 	},
 	{
 		"id": "post7",
 		"title": "Banksy in Totterdown, Bristol of street art by elusive graffiti",
-		"img": "/images/image7.jpg"
+		"img": "/images/image7.jpg",
+		"category": "Business",
+		"date": "January 1, 2020"
 	}
 ]
