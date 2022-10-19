@@ -9,8 +9,8 @@ import CategoryList from "../components/HomeComponent/CategoryList";
 import ArchiveList from "../components/HomeComponent/ArchiveList";
 import { getPostData } from "../lib/utils";
 
-export default function Home({ data, categoriesData }) {
-	console.log(categoriesData);
+export default function Home({ data, categoriesData, archives }) {
+	console.log(archives);
 	return (
 		<HomeLayout>
 			<FirstArticle {...data[0]} />
@@ -23,7 +23,7 @@ export default function Home({ data, categoriesData }) {
 				<div className="lg:col-span-2 lg:p-4 flex flex-col gap-y-12 lg:gap-y-24 overflow-hidden">
 					<MostPopular posts={data.slice(0, 5)} />
 					<CategoryList categories={categoriesData} />
-					<ArchiveList />
+					<ArchiveList archives={archives} />
 					<div className="w-full h-32 bg-red-50"></div>
 					<div className="w-full h-32 bg-red-50"></div>
 				</div>
@@ -51,13 +51,26 @@ export async function getStaticProps() {
 	});
 
 	// archive process
+	const dates = data.map((post) => new Date(post.date));
+	const archives = [];
+	for (let year = 2020; year <= 2022; year++)
+		for (let month = 0; month < 12; month++) {
+			const num = dates.reduce((total, value) => {
+				if (value.getMonth() === month && value.getFullYear() === year) {
+					return total + 1;
+				}
+				return total;
+			}, 0);
+			if (num > 0) {
+				archives.push([month, year, num]);
+			}
+		}
 
-
-	
 	return {
 		props: {
 			data,
 			categoriesData,
+			archives,
 		},
 	};
 }

@@ -1,29 +1,46 @@
 import React from "react";
 import Archive from "./Archive";
 
-const archives = [
-	{ date: "July 2022", bgColor: "bg-red-500", num: 1 },
-	{ date: "October 2021", bgColor: "bg-blue-500", num: 11 },
+const colors = [
 	{
-		date: "September 2021",
-		bgColor: "bg-cyan-500",
-		num: 2,
+		bgColor: "bg-red-500",
+		borderColor: "border-red-500",
 	},
-	{ date: "August 2022", bgColor: "bg-red-500", num: 4 },
-	{ date: "July 2021", bgColor: "bg-yellow-500", num: 6 },
-	{ date: "February 2021", bgColor: "bg-cyan-500", num: 8 },
+	{
+		bgColor: "bg-green-500",
+		borderColor: "border-green-500",
+	},
+	{
+		bgColor: "bg-yellow-500",
+		borderColor: "border-yellow-500",
+	},
+	{
+		bgColor: "bg-orange-500",
+		borderColor: "border-orange-500",
+	},
+	{
+		bgColor: "bg-cyan-500",
+		borderColor: "border-cyan-500",
+	},
+	{
+		bgColor: "bg-pink-500",
+		borderColor: "border-pink-500",
+	},
 ];
 
-const ArchiveList = () => {
+const ArchiveList = ({ archives }) => {
 	return (
 		<div>
-			<h2 className="text-3xl font-semibold mb-9">
-				Archive List
-			</h2>
+			<h2 className="text-3xl font-semibold mb-9">Archive List</h2>
 			<div className="flex flex-col gap-y-2">
 				{archives.map((archive) => {
+					const index = Math.floor(Math.random() * colors.length);
 					return (
-						<Archive key={archive.date} {...archive} />
+						<Archive
+							key={new Date(archive[0], archive[1]).toDateString()}
+							archive={archive}
+							bgColor={colors[index].bgColor}
+						/>
 					);
 				})}
 			</div>

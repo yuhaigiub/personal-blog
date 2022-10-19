@@ -34,7 +34,6 @@ const CategoryList = ({ categories }) => {
 			<h2 className="text-3xl font-semibold sm:mb-9 mb-3">Category List</h2>
 			<div className="flex flex-wrap sm:gap-x-4 gap-y-2 sm:gap-y-4">
 				{categories.map((category) => {
-					console.log(category);
 					const index = Math.floor(Math.random() * colors.length);
 					const { bgColor, borderColor } = colors[index];
 					const [name, number] = Object.entries(category)[0];
